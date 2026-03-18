@@ -1,14 +1,15 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #e5e5e5; }
-    .wrapper { padding: 0; }
+    .wrapper { padding: 30px 0 0; max-width: 1100px; margin: 0 auto; }
     svg.chart { width: 100%; height: auto; display: block; overflow: visible; }
 
     /* ── Fotostreifen ─────────────────────────────── */
     .photo-strip {
       display: flex;
       align-items: center;
+      margin: 40px 0;
       width: 100%;
-      height: 400px;
+      height: 240px;
       gap: 8px;
       padding: 0 3.76%;
       background: #d0d0d0;
@@ -22,8 +23,7 @@
       overflow: hidden;
       cursor: pointer;
       outline: 2px solid #ff3d00;
-      transition: flex  0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                  height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: none;
     }
     .photo-frame img {
       width: 100%;
@@ -40,11 +40,13 @@
     .photo-caption {
       opacity: 0;
       pointer-events: none;
-      padding: 28px 3.76%;
+      padding: 20px 3.76%;
       background: transparent;
       transition: opacity 0.2s;
       will-change: opacity;
       transform: translateZ(0);
+      height: 260px;
+      overflow: hidden;
     }
     .photo-caption.is-visible {
       opacity: 1;
@@ -56,12 +58,12 @@
     }
     .caption-arrows {
       display: flex;
-      gap: 8px;
-      margin-bottom: 20px;
+      gap: 6px;
+      margin-bottom: 14px;
     }
     .caption-nav {
-      width: 44px;
-      height: 44px;
+      width: 31px;
+      height: 31px;
       border-radius: 50%;
       background: #111;
       border: none;
@@ -74,23 +76,23 @@
     .caption-date {
       display: block;
       font-family: Montserrat, sans-serif;
-      font-size: 18px;
+      font-size: 13px;
       font-weight: 500;
       font-style: italic;
       color: #111;
-      margin-bottom: 10px;
+      margin-bottom: 7px;
     }
     .caption-headline {
       font-family: Bitter, Georgia, serif;
-      font-size: 32px;
+      font-size: 22px;
       font-weight: 700;
       line-height: 1.2;
       color: #111;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
     .caption-body {
       font-family: Montserrat, sans-serif;
-      font-size: 18px;
+      font-size: 13px;
       font-weight: 500;
       line-height: 1.55;
       color: #111;
@@ -103,7 +105,9 @@
 
     /* Hover-Zustand wird per JS gesetzt */
 .photo-strip.is-hovered .photo-frame { flex: 0.3; }
-    .photo-frame.is-active               { flex: 7 !important; height: 400px; }
+    .photo-frame.is-active               { flex: 7 !important; height: 240px; min-width: 240px;
+                                           transition: flex 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                                                       height 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
     .photo-frame { position: relative; }
     .photo-frame.is-active::after {
       content: '';

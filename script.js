@@ -315,7 +315,7 @@ const strip = document.querySelector('.photo-strip');
 photoData.forEach(d => {
   const div = document.createElement('div');
   div.className = 'photo-frame';
-  const h = Math.round(240 * (0.7 + Math.random() * 0.6));
+  const h = Math.round(240 * (0.7 + Math.random() * 0.3));
   div.style.setProperty('--base-h', h + 'px');
   if (d.img) {
     const img = document.createElement('img');
@@ -336,6 +336,7 @@ let active = false;
 let pinned = false;
 
 let captionTimer = null;
+let hoverTimer = null;
 
 function updateCaption(idx) {
   const d = photoData[idx] || photoData[0];
@@ -377,7 +378,11 @@ const framesArr = Array.from(frames);
 frames.forEach(frame => {
   frame.addEventListener('mouseenter', () => {
     pinned = false;
-    activate(frame);
+    clearTimeout(hoverTimer);
+    hoverTimer = setTimeout(() => activate(frame), 30);
+  });
+  frame.addEventListener('mouseleave', () => {
+    clearTimeout(hoverTimer);
   });
 });
 
@@ -418,7 +423,8 @@ document.addEventListener('mousemove', (e) => {
   const cr = caption.getBoundingClientRect();
   const inStrip   = e.clientX >= sr.left && e.clientX <= sr.right &&
                     e.clientY >= sr.top  && e.clientY <= sr.bottom;
+  // extend caption zone upward to cover the gap between strip and caption
   const inCaption = e.clientX >= cr.left && e.clientX <= cr.right &&
-                    e.clientY >= cr.top  && e.clientY <= cr.bottom;
+                    e.clientY >= sr.bottom && e.clientY <= cr.bottom;
   if (!inStrip && !inCaption && !pinned) deactivate();
 });
