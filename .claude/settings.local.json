@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open:*)",
+      "Bash(identify /Users/manuelreitz/Dev/dza-zeitleiste/images/01.jpeg)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/manuelreitz/Dev/dza-zeitleiste/images/01.jpeg)",
+      "WebFetch(domain:deutscheszentrumastrophysik.de)",
+      "Bash(sed -n '9,122p' /Users/manuelreitz/Dev/dza-zeitleiste/index.html)",
+      "Bash(sed -n '491,914p' /Users/manuelreitz/Dev/dza-zeitleiste/index.html)",
+      "Bash(cp /tmp/style_content.txt /Users/manuelreitz/Dev/dza-zeitleiste/style.css)",
+      "Bash(cp /tmp/script_content.txt /Users/manuelreitz/Dev/dza-zeitleiste/script.js)"
+    ]
+  }
+}

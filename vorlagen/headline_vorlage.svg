@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 674.61 232.09">
+  <defs>
+    <filter id="outer-glow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="0"/>
+      <feFlood flood-color="#e6e6e6" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="outer-glow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur-2" stdDeviation="0"/>
+      <feFlood flood-color="#e6e6e6" flood-opacity="1"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Ebene_1-2" data-name="Ebene 1">
+    <g>
+      <text transform="translate(96.76 60.1)" filter="url(#outer-glow-1)" font-family="Bitter-Bold, Bitter" font-size="31.41" font-variation-settings="&apos;wght&apos; 700" font-weight="700"><tspan x="0" y="0" letter-spacing="-.03em">W</tspan><tspan x="30.97" y="0">ir haben es </tspan><tspan x="198.86" y="0" letter-spacing="-.02em">g</tspan><tspan x="216.36" y="0">es</tspan><tspan x="249.08" y="0" letter-spacing="0em">c</tspan><tspan x="265.07" y="0">ha</tspan><tspan x="302.57" y="0" letter-spacing="0em">ff</tspan><tspan x="325.46" y="0">t: </tspan><tspan x="350.84" y="0" letter-spacing="-.02em">D</tspan><tspan x="372.63" y="0">as </tspan><tspan x="411.39" y="0" letter-spacing="-.02em">D</tspan><tspan x="432.97" y="0" letter-spacing="-.02em">Z</tspan><tspan x="452" y="0">A </tspan><tspan x=".07" y="37.69" letter-spacing="-.03em">k</tspan><tspan x="17.79" y="37.69">ommt in die sä</tspan><tspan x="234.71" y="37.69" letter-spacing="0em">c</tspan><tspan x="250.69" y="37.69">hsis</tspan><tspan x="311.53" y="37.69" letter-spacing="0em">c</tspan><tspan x="327.51" y="37.69">he </tspan><tspan x="370.29" y="37.69" letter-spacing="0em">L</tspan><tspan x="387.59" y="37.69">ausitz.</tspan></text>
+      <text transform="translate(96.73 152.81)" filter="url(#outer-glow-2)" font-family="Montserrat-Medium, &apos;Montserrat Medium&apos;" font-size="17.95" font-weight="500"><tspan x="0" y="0" letter-spacing="-.01em">W</tspan><tspan x="19.96" y="0">ir haben es ges</tspan><tspan x="157.53" y="0" letter-spacing="0em">c</tspan><tspan x="167.66" y="0">hafft: Das </tspan><tspan x="258.99" y="0" letter-spacing="0em">D</tspan><tspan x="273.67" y="0">ZA </tspan><tspan x="303.42" y="0" letter-spacing="-.02em">k</tspan><tspan x="314.08" y="0">ommt in die </tspan><tspan x=".41" y="24.68">s</tspan><tspan x="9.4" y="24.68" letter-spacing="0em">ä</tspan><tspan x="20.18" y="24.68" letter-spacing="0em">c</tspan><tspan x="30.31" y="24.68">hsis</tspan><tspan x="65.52" y="24.68" letter-spacing="0em">c</tspan><tspan x="75.64" y="24.68" letter-spacing="0em">h</tspan><tspan x="87.91" y="24.68" letter-spacing="0em">e </tspan><tspan x="103.73" y="24.68" letter-spacing="0em">L</tspan><tspan x="114.44" y="24.68">ausit</tspan><tspan x="158.75" y="24.68" letter-spacing="0em">z</tspan><tspan x="168.15" y="24.68">. </tspan><tspan x="177.05" y="24.68" letter-spacing="-.01em">W</tspan><tspan x="197.01" y="24.68">ir wu</tspan><tspan x="242.49" y="24.68" letter-spacing="-.01em">r</tspan><tspan x="249.63" y="24.68">den als ei</tspan><tspan x="335.45" y="24.68" letter-spacing="0em">n</tspan><tspan x="347.72" y="24.68">er </tspan><tspan x="370.89" y="24.68" letter-spacing="-.01em">v</tspan><tspan x="380.66" y="24.68">on </tspan><tspan x="409.1" y="24.68" letter-spacing="0em">z</tspan><tspan x="418.27" y="24.68" letter-spacing="-.01em">w</tspan><tspan x="434.14" y="24.68">ei </tspan><tspan x=".71" y="49.35">G</tspan><tspan x="14.56" y="49.35" letter-spacing="0em">e</tspan><tspan x="25.36" y="49.35">win</tspan><tspan x="58.73" y="49.35" letter-spacing="0em">n</tspan><tspan x="71" y="49.35">e</tspan><tspan x="81.98" y="49.35" letter-spacing="0em">r</tspan><tspan x="89.22" y="49.35">n des </tspan><tspan x="143.31" y="49.35" letter-spacing="-.05em">W</tspan><tspan x="162.53" y="49.35">e</tspan><tspan x="173.51" y="49.35" letter-spacing="-.01em">t</tspan><tspan x="180.71" y="49.35">tb</tspan><tspan x="200.38" y="49.35" letter-spacing="0em">e</tspan><tspan x="211.18" y="49.35" letter-spacing="-.01em">w</tspan><tspan x="227.05" y="49.35" letter-spacing="0em">e</tspan><tspan x="238.03" y="49.35" letter-spacing="0em">r</tspan><tspan x="245.26" y="49.35">bs ausg</tspan><tspan x="315.58" y="49.35" letter-spacing="0em">e</tspan><tspan x="326.47" y="49.35" letter-spacing="0em">z</tspan><tspan x="335.68" y="49.35">ei</tspan><tspan x="351.67" y="49.35" letter-spacing="0em">c</tspan><tspan x="361.79" y="49.35">h</tspan><tspan x="374.01" y="49.35" letter-spacing="0em">n</tspan><tspan x="386.29" y="49.35">e</tspan><tspan x="397.27" y="49.35" letter-spacing="0em">t</tspan><tspan x="404.88" y="49.35">. </tspan></text>
+      <text transform="translate(97.51 15.25)" font-family="Montserrat-MediumItalic, &apos;Montserrat Medium&apos;" font-size="17.95" font-style="italic" font-weight="500"><tspan x="0" y="0">Sep</tspan><tspan x="34.35" y="0" letter-spacing="-.02em">t</tspan><tspan x="41.46" y="0">ember </tspan><tspan x="106.78" y="0" letter-spacing="0em">20</tspan><tspan x="128.93" y="0">22</tspan></text>
+    </g>
+    <g>
+      <circle cx="657.79" cy="64.87" r="16.82"/>
+      <polyline points="655.6 57.69 662.78 64.87 655.6 72.05" fill="none" stroke="#fff" stroke-miterlimit="10"/>
+    </g>
+    <g>
+      <circle cx="16.82" cy="64.87" r="16.82"/>
+      <polyline points="19.02 72.05 11.83 64.87 19.02 57.69" fill="none" stroke="#fff" stroke-miterlimit="10"/>
+    </g>
+  </g>
+</svg>

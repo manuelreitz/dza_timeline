@@ -1,0 +1,114 @@
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #e5e5e5; }
+    .wrapper { padding: 0; }
+    svg.chart { width: 100%; height: auto; display: block; overflow: visible; }
+
+    /* ── Fotostreifen ─────────────────────────────── */
+    .photo-strip {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 400px;
+      gap: 8px;
+      padding: 0 3.76%;
+      background: #d0d0d0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .photo-frame {
+      flex: 1;
+      min-width: 0;
+      height: var(--base-h, 240px);
+      overflow: hidden;
+      cursor: pointer;
+      outline: 2px solid #ff3d00;
+      transition: flex  0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                  height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      pointer-events: none;
+    }
+    .photo-frame:not(:has(img)) {
+      background: #b0b0b0;
+    }
+    /* ── Foto-Caption ────────────────────────────────── */
+    .photo-caption {
+      opacity: 0;
+      pointer-events: none;
+      padding: 28px 3.76%;
+      background: transparent;
+      transition: opacity 0.2s;
+      will-change: opacity;
+      transform: translateZ(0);
+    }
+    .photo-caption.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .caption-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .caption-arrows {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .caption-nav {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #111;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .caption-nav svg { display: block; }
+    .caption-date {
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      font-style: italic;
+      color: #111;
+      margin-bottom: 10px;
+    }
+    .caption-headline {
+      font-family: Bitter, Georgia, serif;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #111;
+      margin-bottom: 14px;
+    }
+    .caption-body {
+      font-family: Montserrat, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.55;
+      color: #111;
+    }
+
+    /* Event Marker */
+    .event-marker { cursor: pointer; }
+    .event-marker:hover .marker-dot { fill: #ff3d00 !important; r: 8; }
+    .event-marker:hover text { font-weight: 700; }
+
+    /* Hover-Zustand wird per JS gesetzt */
+.photo-strip.is-hovered .photo-frame { flex: 0.3; }
+    .photo-frame.is-active               { flex: 7 !important; height: 400px; }
+    .photo-frame { position: relative; }
+    .photo-frame.is-active::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 0 3px #ff3d00;
+      pointer-events: none;
+    }
