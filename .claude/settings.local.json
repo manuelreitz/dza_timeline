@@ -8,7 +8,10 @@
       "Bash(sed -n '9,122p' /Users/manuelreitz/Dev/dza-zeitleiste/index.html)",
       "Bash(sed -n '491,914p' /Users/manuelreitz/Dev/dza-zeitleiste/index.html)",
       "Bash(cp /tmp/style_content.txt /Users/manuelreitz/Dev/dza-zeitleiste/style.css)",
-      "Bash(cp /tmp/script_content.txt /Users/manuelreitz/Dev/dza-zeitleiste/script.js)"
+      "Bash(cp /tmp/script_content.txt /Users/manuelreitz/Dev/dza-zeitleiste/script.js)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
