@@ -187,22 +187,24 @@ function renderChart(rows) {
   }));
 
   // 2 · Kreise + Zahlen
+  const tooltip = document.getElementById('chart-tooltip');
   points.forEach(p => {
-    // Gradient-ID je Jahr (bereits in <defs> definiert)
     const gradId = `g${p.jahr}`;
+    const group = el('g', { class: 'data-bubble' });
 
-    layer.appendChild(el('circle', {
+    const circ = el('circle', {
       cx: p.cx, cy: p.cy, r: p.r,
       fill: `url(#${gradId})`,
       stroke: '#00b9da',
       'stroke-width': '3',
-      'stroke-miterlimit': '10'
-    }));
+      'stroke-miterlimit': '10',
+      class: 'bubble-circle'
+    });
+    group.appendChild(circ);
 
     const fs = fontSize(p.r);
     const txt = el('text', {
-      x: p.cx,
-      y: p.cy,
+      x: p.cx, y: p.cy,
       'text-anchor': 'middle',
       'dominant-baseline': 'central',
       fill: '#fff',
@@ -211,7 +213,24 @@ function renderChart(rows) {
       'font-weight': '700'
     });
     txt.textContent = p.mitarbeiter;
-    layer.appendChild(txt);
+    group.appendChild(txt);
+
+    const label = `${p.mitarbeiter} Mitarbeiterinnen und Mitarbeiter im Jahr ${p.jahr}`;
+    group.addEventListener('mouseenter', () => {
+      tooltip.textContent = label;
+      tooltip.classList.add('is-visible');
+    });
+    group.addEventListener('mousemove', (e) => {
+      const tw = tooltip.offsetWidth;
+      const overflowsRight = e.clientX + 14 + tw > window.innerWidth;
+      tooltip.style.left = (overflowsRight ? e.clientX - 14 - tw : e.clientX + 14) + 'px';
+      tooltip.style.top  = (e.clientY - 10) + 'px';
+    });
+    group.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('is-visible');
+    });
+
+    layer.appendChild(group);
   });
 }
 

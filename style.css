@@ -98,6 +98,29 @@
       color: #111;
     }
 
+    /* Data circle hover */
+    .data-bubble { cursor: default; }
+    .data-bubble .bubble-circle { transition: opacity 0.2s; }
+    .data-bubble:hover .bubble-circle { opacity: 0.3; }
+
+    /* Tooltip */
+    #chart-tooltip {
+      position: fixed;
+      pointer-events: none;
+      background: #111;
+      color: #fff;
+      font-family: Montserrat, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 0;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.15s;
+      z-index: 100;
+    }
+    #chart-tooltip.is-visible { opacity: 1; }
+
     /* Event Marker */
     .event-marker { cursor: pointer; }
     .event-marker:hover .marker-dot { fill: #ff3d00 !important; r: 8; }
