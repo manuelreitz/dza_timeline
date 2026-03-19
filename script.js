@@ -401,8 +401,8 @@ document.querySelectorAll('.event-marker').forEach(marker => {
     if (!target) return;
     pinned = true;
     activate(target);
-    strip.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    const stripTop = strip.getBoundingClientRect().top + window.scrollY - 20;
+    window.scrollTo({ top: stripTop, behavior: 'smooth' });
   });
 });
 

@@ -22,7 +22,7 @@
       height: var(--base-h, 240px);
       overflow: hidden;
       cursor: pointer;
-      outline: 2px solid #ff3d00;
+      outline: 1px solid #ff3d00;
       transition: none;
     }
     .photo-frame img {
@@ -113,6 +113,6 @@
       content: '';
       position: absolute;
       inset: 0;
-      box-shadow: inset 0 0 0 3px #ff3d00;
+      box-shadow: inset 0 0 0 2px #ff3d00;
       pointer-events: none;
     }
